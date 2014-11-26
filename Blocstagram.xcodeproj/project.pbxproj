@@ -23,6 +23,10 @@
 		2924DCF71A25382500D1262F /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2924DCED1A25382500D1262F /* 9.jpg */; };
 		2924DCF81A25382500D1262F /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2924DCEE1A25382500D1262F /* 10.jpg */; };
 		2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */; };
+		29FBAA411A2628230019C593 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA401A2628230019C593 /* User.m */; };
+		29FBAA441A2628D70019C593 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA431A2628D70019C593 /* Media.m */; };
+		29FBAA471A2629B00019C593 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA461A2629B00019C593 /* Comment.m */; };
+		29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA491A262A8A0019C593 /* DataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,14 @@
 		2924DCEE1A25382500D1262F /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		2924DCF91A2538ED00D1262F /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
 		2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
+		29FBAA3F1A2628230019C593 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		29FBAA401A2628230019C593 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		29FBAA421A2628D70019C593 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		29FBAA431A2628D70019C593 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		29FBAA451A2629B00019C593 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		29FBAA461A2629B00019C593 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		29FBAA481A262A8A0019C593 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		29FBAA491A262A8A0019C593 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +111,20 @@
 		2924DCBD1A25226700D1262F /* Blocstagram */ = {
 			isa = PBXGroup;
 			children = (
-				2924DCE41A25380C00D1262F /* Images */,
 				2924DCC21A25226700D1262F /* AppDelegate.h */,
 				2924DCC31A25226700D1262F /* AppDelegate.m */,
 				2924DCF91A2538ED00D1262F /* ImagesTableViewController.h */,
 				2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */,
+				29FBAA451A2629B00019C593 /* Comment.h */,
+				29FBAA461A2629B00019C593 /* Comment.m */,
+				29FBAA481A262A8A0019C593 /* DataSource.h */,
+				29FBAA491A262A8A0019C593 /* DataSource.m */,
+				29FBAA421A2628D70019C593 /* Media.h */,
+				29FBAA431A2628D70019C593 /* Media.m */,
+				29FBAA3F1A2628230019C593 /* User.h */,
+				29FBAA401A2628230019C593 /* User.m */,
 				2924DCCB1A25226700D1262F /* Images.xcassets */,
+				2924DCE41A25380C00D1262F /* Images */,
 				2924DCCD1A25226700D1262F /* LaunchScreen.xib */,
 				2924DCBE1A25226700D1262F /* Supporting Files */,
 			);
@@ -263,7 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29FBAA411A2628230019C593 /* User.m in Sources */,
+				29FBAA471A2629B00019C593 /* Comment.m in Sources */,
+				29FBAA441A2628D70019C593 /* Media.m in Sources */,
 				2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */,
+				29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */,
 				2924DCC41A25226700D1262F /* AppDelegate.m in Sources */,
 				2924DCC11A25226700D1262F /* main.m in Sources */,
 			);
@@ -450,6 +474,7 @@
 				2924DCE01A25226800D1262F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2924DCE11A25226800D1262F /* Build configuration list for PBXNativeTarget "BlocstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +483,7 @@
 				2924DCE31A25226800D1262F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
