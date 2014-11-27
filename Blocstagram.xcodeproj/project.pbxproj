@@ -27,6 +27,7 @@
 		29FBAA441A2628D70019C593 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA431A2628D70019C593 /* Media.m */; };
 		29FBAA471A2629B00019C593 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA461A2629B00019C593 /* Comment.m */; };
 		29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA491A262A8A0019C593 /* DataSource.m */; };
+		29FBAA4D1A268A530019C593 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA4C1A268A530019C593 /* MediaTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		29FBAA461A2629B00019C593 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		29FBAA481A262A8A0019C593 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		29FBAA491A262A8A0019C593 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		29FBAA4B1A268A530019C593 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
+		29FBAA4C1A268A530019C593 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				29FBAA491A262A8A0019C593 /* DataSource.m */,
 				29FBAA421A2628D70019C593 /* Media.h */,
 				29FBAA431A2628D70019C593 /* Media.m */,
+				29FBAA4B1A268A530019C593 /* MediaTableViewCell.h */,
+				29FBAA4C1A268A530019C593 /* MediaTableViewCell.m */,
 				29FBAA3F1A2628230019C593 /* User.h */,
 				29FBAA401A2628230019C593 /* User.m */,
 				2924DCCB1A25226700D1262F /* Images.xcassets */,
@@ -285,6 +290,7 @@
 			files = (
 				29FBAA411A2628230019C593 /* User.m in Sources */,
 				29FBAA471A2629B00019C593 /* Comment.m in Sources */,
+				29FBAA4D1A268A530019C593 /* MediaTableViewCell.m in Sources */,
 				29FBAA441A2628D70019C593 /* Media.m in Sources */,
 				2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */,
 				29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */,
