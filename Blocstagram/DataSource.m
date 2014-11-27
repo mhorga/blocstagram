@@ -30,7 +30,7 @@
         Media *media = [[Media alloc] init];
         media.user = [self randomUser];
         media.image = [UIImage imageNamed:@"10.jpg"];
-        media.caption = [self randomSentenceWithMaximumNumberOfWords:7];
+        media.caption = [self randomStringOfLength:7];
         
         NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
         [mutableArrayWithKVO insertObject:media atIndex:0];
@@ -49,7 +49,7 @@
         Media *media = [[Media alloc] init];
         media.user = [self randomUser];
         media.image = [UIImage imageNamed:@"1.jpg"];
-        media.caption = [self randomSentenceWithMaximumNumberOfWords:7];
+        media.caption = [self randomStringOfLength:7];
         
         NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
         [mutableArrayWithKVO addObject:media];
