@@ -143,8 +143,11 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//int counter = 0;
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView { // called only once per image scrolled
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {           // called ~700 times
+    //counter++;
+    //NSLog(@"%d", counter);
     [self infiniteScrollIfNecessary];
 }
 

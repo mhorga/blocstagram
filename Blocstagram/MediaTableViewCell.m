@@ -85,9 +85,11 @@ static NSParagraphStyle *paragraphStyle;
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_commentLabel]|" options:kNilOptions metrics:nil views:viewDictionary]];
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mediaImageView][_usernameAndCaptionLabel][_commentLabel]"
                                                                                  options:kNilOptions metrics:nil views:viewDictionary]];
-        self.imageHeightConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeHeight
+        self.imageHeightConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView
+                                                                            attribute:NSLayoutAttributeHeight
                                                                             relatedBy:NSLayoutRelationEqual toItem:nil
-                                                                            attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:100];
+                                                                            attribute:NSLayoutAttributeNotAnAttribute
+                                                                            multiplier:1 constant:100];
         
         
         self.usernameAndCaptionLabelHeightConstraint = [NSLayoutConstraint constraintWithItem:_usernameAndCaptionLabel
@@ -97,8 +99,9 @@ static NSParagraphStyle *paragraphStyle;
                                                                             multiplier:1 constant:100];
         
         self.commentLabelHeightConstraint = [NSLayoutConstraint constraintWithItem:_commentLabel
-                                                                            attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual
-                                                                            toItem:nil attribute:NSLayoutAttributeNotAnAttribute
+                                                                            attribute:NSLayoutAttributeHeight
+                                                                            relatedBy:NSLayoutRelationEqual toItem:nil
+                                                                            attribute:NSLayoutAttributeNotAnAttribute
                                                                             multiplier:1 constant:100];
         
         [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
