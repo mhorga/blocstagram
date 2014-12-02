@@ -23,6 +23,7 @@
 		2924DCF71A25382500D1262F /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2924DCED1A25382500D1262F /* 9.jpg */; };
 		2924DCF81A25382500D1262F /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2924DCEE1A25382500D1262F /* 10.jpg */; };
 		2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */; };
+		297ABA651A2DE6BD00F9D4FE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297ABA641A2DE6BD00F9D4FE /* LoginViewController.m */; };
 		29FBAA411A2628230019C593 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA401A2628230019C593 /* User.m */; };
 		29FBAA441A2628D70019C593 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA431A2628D70019C593 /* Media.m */; };
 		29FBAA471A2629B00019C593 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA461A2629B00019C593 /* Comment.m */; };
@@ -63,6 +64,8 @@
 		2924DCEE1A25382500D1262F /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		2924DCF91A2538ED00D1262F /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
 		2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
+		297ABA631A2DE6BD00F9D4FE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		297ABA641A2DE6BD00F9D4FE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		29FBAA3F1A2628230019C593 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		29FBAA401A2628230019C593 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		29FBAA421A2628D70019C593 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				29FBAA461A2629B00019C593 /* Comment.m */,
 				29FBAA481A262A8A0019C593 /* DataSource.h */,
 				29FBAA491A262A8A0019C593 /* DataSource.m */,
+				297ABA631A2DE6BD00F9D4FE /* LoginViewController.h */,
+				297ABA641A2DE6BD00F9D4FE /* LoginViewController.m */,
 				29FBAA421A2628D70019C593 /* Media.h */,
 				29FBAA431A2628D70019C593 /* Media.m */,
 				29FBAA4B1A268A530019C593 /* MediaTableViewCell.h */,
@@ -293,6 +298,7 @@
 				29FBAA4D1A268A530019C593 /* MediaTableViewCell.m in Sources */,
 				29FBAA441A2628D70019C593 /* Media.m in Sources */,
 				2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */,
+				297ABA651A2DE6BD00F9D4FE /* LoginViewController.m in Sources */,
 				29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */,
 				2924DCC41A25226700D1262F /* AppDelegate.m in Sources */,
 				2924DCC11A25226700D1262F /* main.m in Sources */,
