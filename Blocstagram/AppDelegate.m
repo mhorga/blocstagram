@@ -31,6 +31,9 @@
     }];
     self.window.rootViewController = navVC;
     
+    UIViewController *secondVC = [[UIViewController alloc] init];
+    [navVC pushViewController:secondVC animated:YES];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
