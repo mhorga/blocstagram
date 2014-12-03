@@ -27,6 +27,7 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     UIWebView *webView = [[UIWebView alloc] init];
     webView.delegate = self;
     
+    self.title = @"Login";
     self.webView = webView;
     self.view = webView;
 }
@@ -34,7 +35,6 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Login";
     NSString *urlString = [NSString stringWithFormat:@"https://instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token", [DataSource instagramClientID], [self redirectURI]];
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -47,8 +47,6 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 - (void) dealloc {
     // Removing this line causes a weird flickering effect when you relaunch the app after logging in, as the web view is briefly displayed, automatically authenticates with cookies, returns the access token, and dismisses the login view, sometimes in less than a second.
     [self clearInstagramCookies];
-    
-    // see https://developer.apple.com/library/ios/documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/doc/uid/TP40006951-CH3-DontLinkElementID_1
     self.webView.delegate = nil;
 }
 
@@ -72,10 +70,20 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
         NSUInteger indexOfTokenStarting = rangeOfAccessTokenParameter.location + rangeOfAccessTokenParameter.length;
         NSString *accessToken = [urlString substringFromIndex:indexOfTokenStarting];
         [[NSNotificationCenter defaultCenter] postNotificationName:LoginViewControllerDidGetAccessTokenNotification object:accessToken];
+    
         return NO;
     }
     
+    if (navigationType == UIWebViewNavigationTypeLinkClicked){
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style: UIBarButtonItemStylePlain target:self action:@selector(Back)];
+        self.navigationItem.leftBarButtonItem = backButton;
+    }
+    
     return YES;
+}
+
+- (IBAction)Back {
+    [self dismissViewControllerAnimated:YES completion:nil]; // ios 6
 }
 
 - (void)didReceiveMemoryWarning {
