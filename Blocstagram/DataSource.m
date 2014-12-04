@@ -187,6 +187,9 @@
         if (minID) {
             parameters = @{@"min_id": minID};
         }
+        else {
+            parameters = nil;
+        }
         
         [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
             self.isRefreshing = NO;
