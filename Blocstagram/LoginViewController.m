@@ -82,8 +82,8 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     return YES;
 }
 
-- (IBAction)Back {
-    [self dismissViewControllerAnimated:YES completion:nil]; // ios 6
+- (void)Back {
+    [self.webView goBack];
 }
 
 - (void)didReceiveMemoryWarning {
