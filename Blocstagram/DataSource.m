@@ -56,7 +56,7 @@
                 NSArray *storedMediaItems = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    if (storedMediaItems.count > 0) {
+                    if (storedMediaItems.count > 0 || storedMediaItems.count < _mediaItems.count) {
                         NSMutableArray *mutableMediaItems = [storedMediaItems mutableCopy];
                         
                         [self willChangeValueForKey:@"mediaItems"];
