@@ -62,6 +62,10 @@
                         [self willChangeValueForKey:@"mediaItems"];
                         self.mediaItems = mutableMediaItems;
                         [self didChangeValueForKey:@"mediaItems"];
+                        
+                        for (Media *mediaItem in mutableMediaItems) {
+                            [self downloadImageForMediaItem:mediaItem];
+                        }
                     } else {
                         [self populateDataWithParameters:nil completionHandler:nil];
                     }
