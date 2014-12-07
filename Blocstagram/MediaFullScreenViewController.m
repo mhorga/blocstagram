@@ -56,18 +56,17 @@
     [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
     [self.shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
     [self.scrollView addSubview:self.shareButton];
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.shareButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:20.f];
-    [self.scrollView addConstraint:constraint];
-    constraint = [NSLayoutConstraint constraintWithItem:self.shareButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:20.f];
-    [self.scrollView addConstraint:constraint];
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
 }
      
 - (void) share {
-    //UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-    //[self presentViewController:activityVC animated:YES completion:nil];
+    NSMutableArray *itemsToShare = [NSMutableArray array];
+    [itemsToShare addObject:self.imageView.image];
+    [itemsToShare addObject:self.media.caption];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (void) viewWillLayoutSubviews {
@@ -83,6 +82,8 @@
     
     self.scrollView.minimumZoomScale = minScale;
     self.scrollView.maximumZoomScale = 1;
+    
+    self.shareButton.frame = CGRectMake(self.view.frame.size.width - 100, 20, 80, 44);
 }
 
 - (void)centerScrollView {
