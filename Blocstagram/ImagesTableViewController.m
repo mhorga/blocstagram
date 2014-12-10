@@ -192,6 +192,8 @@
     }
 }
 
+- (void) cell:(MediaTableViewCell *)cell didDoubleTapImageView:(UIImageView *)imageView {}
+
 #pragma mark - UIViewControllerTransitioningDelegate
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {

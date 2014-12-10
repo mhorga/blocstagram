@@ -10,6 +10,7 @@
 #import "Comment.h"
 #import "User.h"
 #import "Media.h"
+#import "DataSource.h"
 
 @interface MediaTableViewCell () <UIGestureRecognizerDelegate>
 
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTouch;
 
 @end
 
@@ -72,12 +74,19 @@ static NSParagraphStyle *paragraphStyle;
         // Initialization code
         self.mediaImageView = [[UIImageView alloc] init];
         self.mediaImageView.userInteractionEnabled = YES;
+        
+        self.doubleTouch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(redownload:)];
+        self.doubleTouch.numberOfTouchesRequired = 2;
+        [self.mediaImageView addGestureRecognizer:self.doubleTouch];
+        
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         self.longPressGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.longPressGestureRecognizer];
+        
         self.usernameAndCaptionLabel = [[UILabel alloc] init];
         self.commentLabel = [[UILabel alloc] init];
         self.commentLabel.numberOfLines = 0;
@@ -195,6 +204,11 @@ static NSParagraphStyle *paragraphStyle;
     if (sender.state == UIGestureRecognizerStateBegan) {
         [self.delegate cell:self didLongPressImageView:self.mediaImageView];
     }
+}
+
+- (void) redownload:(UITapGestureRecognizer *)sender
+{
+    [self.delegate cell:self didDoubleTapImageView:self.mediaImageView];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
