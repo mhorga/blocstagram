@@ -127,6 +127,13 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Media *mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) {
+        [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
+    }
+}
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Media *item = [self item][indexPath.row];
     
@@ -159,6 +166,10 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    [self infiniteScrollIfNecessary];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self infiniteScrollIfNecessary];
 }
 
