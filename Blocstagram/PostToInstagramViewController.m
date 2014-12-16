@@ -196,7 +196,26 @@
 }
 
 - (void) addFiltersToQueue {
+    
     CIImage *sourceCIImage = [CIImage imageWithCGImage:self.sourceImage.CGImage];
+    
+    // Multiply compositing filter
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *multiplyCompositingFilter = [CIFilter filterWithName:@"CIMultiplyCompositing"];
+        if (multiplyCompositingFilter) {
+            [multiplyCompositingFilter setValue:sourceCIImage forKey:kCIInputImageKey];
+            [self addCIImageToCollectionView:multiplyCompositingFilter.outputImage withFilterTitle:NSLocalizedString(@"Multiply compositing", @"Multiply compositing Filter")];
+        }
+    }];
+    
+    // Gaussian blur filter
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *blurFilter = [CIFilter filterWithName:@"CIGaussianBlur"];
+        if (blurFilter) {
+            [blurFilter setValue:sourceCIImage forKey:kCIInputImageKey];
+            [self addCIImageToCollectionView:blurFilter.outputImage withFilterTitle:NSLocalizedString(@"Gaussian blur", @"Gaussian blur Filter")];
+        }
+    }];
     
     // Noir filter
     [self.photoFilterOperationQueue addOperationWithBlock:^{
