@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define isPhone ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+
 @class Media, MediaTableViewCell, ComposeCommentView;
 
 @protocol MediaTableViewCellDelegate <NSObject>
