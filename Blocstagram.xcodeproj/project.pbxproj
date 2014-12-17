@@ -34,6 +34,7 @@
 		29BB3D441A39AE3F000ED927 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB3D431A39AE3F000ED927 /* CircleSpinnerView.m */; };
 		29BB3D471A3A0FD7000ED927 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB3D461A3A0FD7000ED927 /* LikeButton.m */; };
 		29BB3D4A1A3CD920000ED927 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB3D491A3CD920000ED927 /* ComposeCommentView.m */; };
+		29CB0D301A41F0B900068351 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB0D2F1A41F0B900068351 /* UserTests.m */; };
 		29E589841A332AB600A64C3B /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E589831A332AB600A64C3B /* MediaFullScreenViewController.m */; };
 		29E589871A3332B200A64C3B /* MediaFullScreenAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E589861A3332B200A64C3B /* MediaFullScreenAnimator.m */; };
 		29FBAA411A2628230019C593 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FBAA401A2628230019C593 /* User.m */; };
@@ -100,6 +101,7 @@
 		29BB3D461A3A0FD7000ED927 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 		29BB3D481A3CD920000ED927 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		29BB3D491A3CD920000ED927 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
+		29CB0D2F1A41F0B900068351 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		29E589821A332AB600A64C3B /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		29E589831A332AB600A64C3B /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		29E589851A3332B200A64C3B /* MediaFullScreenAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenAnimator.h; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				2998648E1A3F71F100B4ABBE /* ImageLibraryViewController.m */,
 				2924DCF91A2538ED00D1262F /* ImagesTableViewController.h */,
 				2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */,
+				29CB0D2F1A41F0B900068351 /* UserTests.m */,
 				29BB3D451A3A0FD7000ED927 /* LikeButton.h */,
 				29BB3D461A3A0FD7000ED927 /* LikeButton.m */,
 				297ABA631A2DE6BD00F9D4FE /* LoginViewController.h */,
@@ -440,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CB0D301A41F0B900068351 /* UserTests.m in Sources */,
 				2924DCDB1A25226700D1262F /* BlocstagramTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
