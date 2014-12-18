@@ -11,6 +11,8 @@
 #import "User.h"
 #import "Comment.h"
 #import "Media.h"
+#import "ComposeCommentView.h"
+#import "MediaTableViewCell.m"
 
 @interface UserTests : XCTestCase
 
@@ -58,11 +60,21 @@
 }
 
 - (void)testSetText {
-    // Write a test that ensures [BLCComposeCommentView -setText:] sets isWritingComment to YES if there's text, and another to ensure that it's set to NO if there's not text.
+    ComposeCommentView *ccView = [[ComposeCommentView alloc] init];
+    ccView.text = @"text";
+    XCTAssertTrue(ccView.isWritingComment == YES);
+    ccView.text = nil;
+    XCTAssertTrue(ccView.isWritingComment == NO);
 }
 
 - (void)testHeightForMediaItem {
-    // Write a variety of tests to ensure that [BLCMediaTableViewCell +heightForMediaItem:width:] returns accurate heights. You may need to add sample images to your project's test bundle to accomplish this.
+    NSURL *url = [[NSURL alloc] initWithString:@"http://blocblog.s3.amazonaws.com/2014/11/Bloc-logo-rectangle-grey.jpg"];
+    NSDictionary *sourceDictionary = @{@"url" : url};
+    Media *testMedia = [[Media alloc] initWithDictionary:sourceDictionary];
+    UIImage *testImage = [[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfURL:url]];
+    CGFloat height = testImage.size.height;
+    
+    XCTAssertEqual(height, [MediaTableViewCell heightForMediaItem:testMedia width:height]);
 }
 
 @end
