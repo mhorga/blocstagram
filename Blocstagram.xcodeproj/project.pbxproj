@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291181431A447D11001C3B61 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 291181421A447D11001C3B61 /* ImageCollectionViewCell.m */; };
 		2924DCC11A25226700D1262F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2924DCC01A25226700D1262F /* main.m */; };
 		2924DCC41A25226700D1262F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2924DCC31A25226700D1262F /* AppDelegate.m */; };
 		2924DCCC1A25226700D1262F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2924DCCB1A25226700D1262F /* Images.xcassets */; };
@@ -57,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		24B3F3C12876CEF200098C56 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		291181411A447D11001C3B61 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		291181421A447D11001C3B61 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		2924DCBB1A25226700D1262F /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2924DCBF1A25226700D1262F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2924DCC01A25226700D1262F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				2998648E1A3F71F100B4ABBE /* ImageLibraryViewController.m */,
 				2924DCF91A2538ED00D1262F /* ImagesTableViewController.h */,
 				2924DCFA1A2538ED00D1262F /* ImagesTableViewController.m */,
+				291181411A447D11001C3B61 /* ImageCollectionViewCell.h */,
+				291181421A447D11001C3B61 /* ImageCollectionViewCell.m */,
 				29CB0D2F1A41F0B900068351 /* UserTests.m */,
 				29BB3D451A3A0FD7000ED927 /* LikeButton.h */,
 				29BB3D461A3A0FD7000ED927 /* LikeButton.m */,
@@ -423,6 +428,7 @@
 				29E589871A3332B200A64C3B /* MediaFullScreenAnimator.m in Sources */,
 				29FBAA441A2628D70019C593 /* Media.m in Sources */,
 				2924DCFB1A2538ED00D1262F /* ImagesTableViewController.m in Sources */,
+				291181431A447D11001C3B61 /* ImageCollectionViewCell.m in Sources */,
 				299864891A3EF20000B4ABBE /* CropBox.m in Sources */,
 				297ABA651A2DE6BD00F9D4FE /* LoginViewController.m in Sources */,
 				29FBAA4A1A262A8A0019C593 /* DataSource.m in Sources */,

@@ -9,6 +9,7 @@
 #import "ImageLibraryViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "CropImageViewController.h"
+#import "ImageCollectionViewCell.h"
 
 @interface ImageLibraryViewController () <CropImageViewControllerDelegate>
 
@@ -42,7 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerClass:[ImageCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusable view"];
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
@@ -139,20 +140,10 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSInteger imageViewTag = 54321;
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
-    
-    if (!imageView) {
-        imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
-        imageView.tag = imageViewTag;
-        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-        imageView.clipsToBounds = YES;
-        [cell.contentView addSubview:imageView];
-    }
+    //
     
     ALAsset *asset = self.arraysOfAssets[indexPath.section][indexPath.row];
     CGImageRef imageRef = asset.thumbnail;
@@ -163,7 +154,7 @@ static NSString * const reuseIdentifier = @"Cell";
         image = [UIImage imageWithCGImage:imageRef];
     }
     
-    imageView.image = image;
+    cell.imageView.image = image;
     
     return cell;
 }
